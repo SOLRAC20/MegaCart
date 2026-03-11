@@ -1,1 +1,119 @@
-<p>footer works!</p>
+<footer class="bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+      <!-- Exclusive -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Exclusive</h3>
+        <p class="text-base font-medium mb-3">Subscribe</p>
+        <p class="text-sm text-gray-400 mb-4">Get 10% off your first order</p>
+        <form class="flex items-center border border-gray-500 rounded-md overflow-hidden">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="bg-transparent text-sm text-white placeholder-gray-500 px-3 py-2 outline-none flex-1 min-w-0"
+          />
+          <button type="submit" class="px-3 py-2 text-white hover:text-gray-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Support</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+          <li>exclusive&#64;gmail.com</li>
+          <li>+88015-88888-9999</li>
+        </ul>
+      </div>
+
+      <!-- Account -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Account</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a routerLink="/account" class="hover:text-white transition-colors">My Account</a></li>
+          <li><a routerLink="/account" class="hover:text-white transition-colors">Login / Register</a></li>
+          <li><a routerLink="/cart" class="hover:text-white transition-colors">Cart</a></li>
+          <li><a routerLink="/home" class="hover:text-white transition-colors">Wishlist</a></li>
+          <li><a routerLink="/home" class="hover:text-white transition-colors">Shop</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Link -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Quick Link</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a routerLink="/about" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a routerLink="/about" class="hover:text-white transition-colors">Terms Of Use</a></li>
+          <li><a routerLink="/about" class="hover:text-white transition-colors">FAQ</a></li>
+          <li><a routerLink="/contact" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Download App -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Download App</h3>
+        <p class="text-xs text-gray-500 mb-3">Save $3 with App New User Only</p>
+        <div class="flex gap-2 mb-4">
+          <div class="w-20 h-20 bg-gray-800 rounded-md flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="3" height="3" rx="0.5"/>
+              <rect x="18" y="14" width="3" height="3" rx="0.5"/>
+              <rect x="14" y="18" width="3" height="3" rx="0.5"/>
+              <rect x="18" y="18" width="3" height="3" rx="0.5"/>
+            </svg>
+          </div>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2 border border-gray-600 rounded-md px-2 py-1.5 hover:border-gray-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-2.647 1.534-2.288-2.288 2.633-2.576zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                <div class="leading-tight">
+                  <div class="text-[8px] text-gray-400 uppercase">Get it on</div>
+                  <div class="text-xs font-medium">Google Play</div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="block">
+              <div class="flex items-center gap-2 border border-gray-600 rounded-md px-2 py-1.5 hover:border-gray-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div class="leading-tight">
+                  <div class="text-[8px] text-gray-400 uppercase">Download on the</div>
+                  <div class="text-xs font-medium">App Store</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-2">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="border-t border-gray-800">
+    <p class="text-center text-sm text-gray-500 py-5">&copy; Copyright Rimel 2022. All right reserved</p>
+  </div>
+</footer>

@@ -1,20 +1,201 @@
 <div class="container mx-auto">
     <app-destaques></app-destaques>
 
-    <div class="py-8">
+
+    <div class="py-8 border-b border-gray-400 mb-5">
         <div>
-            <div class="border-l-10 border-red-500 py-1 flex items-center">
-                <h2 class="text-sm text-red-500 mb-4 pl-2">Hoje</h2>
+            <div class=" mb-8">
+                <div class="border-l-4 border-red-500 py-1 flex items-center">
+                    <span class="text-sm text-red-500 pl-2">Categories</span>
+                </div>
+                <h2 class="text-2xl font-bold mt-2">Browse By Category</h2>
             </div>
-            <h2 class="text-2xl font-bold mb-4">New Arrivals</h2>
 
 
-            <div class="grid grid-cols-6 gap-4 overflow-x-auto">
-                @for (item of promosToday; track $index) {
+            @defer (on idle) {
+                <swiper-container
+                    free-mode="true"
+                    slides-per-view="auto"
+                    space-between="16"
+                    loop="true">
+                    @for (item of promosToday; track $index) {
+                        <swiper-slide style="width: 270px;">
+                            <app-card-product [product]="item"></app-card-product>
+                        </swiper-slide>
+                    }
+                </swiper-container>
+            }
 
-                <app-card-product [product]="item"></app-card-product>
+
+            <div class="flex justify-center mt-12 text-white ">
+                <button class="bg-[#DB4444] w-[234px] px-4 py-4 hover:bg-[#DB4444]/90 text-sm font-medium cursor-pointer">
+                    Ver Todas
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Browse By Category -->
+    <div class="py-8 border-b border-gray-200 mb-5">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <div class="border-l-4 border-red-500 py-1 flex items-center">
+                    <span class="text-sm text-red-500 pl-2">Categories</span>
+                </div>
+                <h2 class="text-2xl font-bold mt-2">Browse By Category</h2>
+            </div>
+            <div class="flex gap-2">
+                <button (click)="prevCategory()"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
+                    &#8592;
+                </button>
+                <button (click)="nextCategory()"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
+                    &#8594;
+                </button>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            @defer (on idle) {
+            <swiper-container #categorySwiper free-mode="true" slides-per-view="auto" space-between="16">
+                @for (cat of categories; track cat.id) {
+                    <swiper-slide style="width: 200px;">
+                        <button
+                            (click)="selectedCategoryId = cat.id"
+                            class="w-full h-36 border rounded flex flex-col items-center justify-center gap-3 cursor-pointer transition-all"
+                            [class.border-gray-200]="selectedCategoryId !== cat.id"
+                            [class.bg-red-500]="selectedCategoryId === cat.id"
+                            [class.border-red-500]="selectedCategoryId === cat.id"
+                            [class.text-white]="selectedCategoryId === cat.id">
+                            <img
+                                [src]="cat.iconUrl"
+                                [alt]="cat.name"
+                                class="w-12 h-12"
+                                [class.cat-icon-active]="selectedCategoryId === cat.id" />
+                            <span class="text-sm font-medium">{{ cat.name }}</span>
+                        </button>
+                    </swiper-slide>
                 }
+            </swiper-container>
+        }
+        </div>
+    </div>
+
+    
+    <div class="py-8 border-b border-gray-400 mb-5">
+        <div>
+            <div class="mb-8">
+                <div class="border-l-4 border-red-500 py-1 flex items-center">
+                    <span class="text-sm text-red-500 pl-2">Categories</span>
+                </div>
+                <h2 class="text-2xl font-bold mt-2">Browse By Category</h2>
             </div>
+
+
+            @defer (on idle) {
+                <swiper-container
+                    free-mode="true"
+                    slides-per-view="auto"
+                    space-between="16"
+                    loop="true">
+                    @for (item of promosToday; track $index) {
+                        <swiper-slide style="width: 270px;">
+                            <app-card-product [product]="item"></app-card-product>
+                        </swiper-slide>
+                    }
+                </swiper-container>
+            }
+
+
+            <div class="flex justify-center mt-12 text-white ">
+                <button class="bg-[#DB4444] w-[234px] px-4 py-4 hover:bg-[#DB4444]/90 text-sm font-medium cursor-pointer">
+                    Ver Todas
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Banner -->
+    <div class="relative bg-black rounded-sm overflow-hidden my-10 flex items-center min-h-[500px]">
+        <!-- Blurred gray glow behind the image -->
+        <div class="absolute right-[10%] top-[30%] w-[420px] h-[200px] rounded-full bg-gray-200/60 blur-[100px] z-0"></div>
+        <!-- Left: text + countdown -->
+        <div class="flex-1 p-12 z-10">
+            <span class="text-green-400 text-sm font-medium block mb-6">Categories</span>
+            <h2 class="text-white text-4xl font-bold leading-tight mb-8">
+                Enhance Your<br>Music Experience
+            </h2>
+            <!-- Countdown -->
+            <div class="flex gap-4 mb-8">
+                <div class="bg-white rounded-full w-16 h-16 flex flex-col items-center justify-center text-center">
+                    <span class="font-bold text-lg leading-none">{{ pad(countdown.hours) }}</span>
+                    <span class="text-[10px] text-gray-500 mt-0.5">Hours</span>
+                </div>
+                <div class="bg-white rounded-full w-16 h-16 flex flex-col items-center justify-center text-center">
+                    <span class="font-bold text-lg leading-none">{{ pad(countdown.days) }}</span>
+                    <span class="text-[10px] text-gray-500 mt-0.5">Days</span>
+                </div>
+                <div class="bg-white rounded-full w-16 h-16 flex flex-col items-center justify-center text-center">
+                    <span class="font-bold text-lg leading-none">{{ pad(countdown.minutes) }}</span>
+                    <span class="text-[10px] text-gray-500 mt-0.5">Minutes</span>
+                </div>
+                <div class="bg-white rounded-full w-16 h-16 flex flex-col items-center justify-center text-center">
+                    <span class="font-bold text-lg leading-none">{{ pad(countdown.seconds) }}</span>
+                    <span class="text-[10px] text-gray-500 mt-0.5">Seconds</span>
+                </div>
+            </div>
+            <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-sm font-semibold cursor-pointer transition-colors">
+                Buy Now!
+            </button>
+        </div>
+        <!-- Right: image -->
+        <div class="flex-1 relative flex items-end justify-center h-full">
+            <img src="assets/img/products/JBL_BOOMBOX.png" alt="JBL Boombox" class="relative z-10 h-[80%] object-contain">
+        </div>
+    </div>
+
+    <!-- Explore Our Products -->
+    <div class="py-8 mb-5">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <div class="border-l-4 border-red-500 py-1 flex items-center">
+                    <span class="text-sm text-red-500 pl-2">Our Products</span>
+                </div>
+                <h2 class="text-2xl font-bold mt-2">Explore Our Products</h2>
+            </div>
+            <div class="flex gap-2">
+                <button (click)="prevExplore()"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
+                    &#8592;
+                </button>
+                <button (click)="nextExplore()"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
+                    &#8594;
+                </button>
+            </div>
+        </div>
+
+        @defer (on idle) {
+            <swiper-container
+                #exploreSwiper
+                slides-per-view="4"
+                slides-per-group="4"
+                space-between="16"
+                grid='{"rows":2,"fill":"row"}'>
+                @for (item of exploreProducts; track item.id) {
+                    <swiper-slide>
+                        <app-card-product [product]="item"></app-card-product>
+                    </swiper-slide>
+                }
+            </swiper-container>
+        }
+
+        <div class="flex justify-center mt-12 text-white">
+            <button class="bg-[#DB4444] w-[234px] px-4 py-4 hover:bg-[#DB4444]/90 text-sm font-medium cursor-pointer">
+                View All Products
+            </button>
         </div>
     </div>
 </div>

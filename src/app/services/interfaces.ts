@@ -5,3 +5,9 @@ export interface Product {
     imageUrl: string;
     description: string;
 }
+
+export interface Category {
+    id: number;
+    name: string;
+    iconUrl: string;
+}

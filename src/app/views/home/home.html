@@ -1,5 +1,5 @@
+<app-destaques></app-destaques>
 <div class="container mx-auto">
-    <app-destaques></app-destaques>
 
 
     <div class="py-8 border-b border-gray-400 mb-5">
@@ -120,7 +120,7 @@
     <!-- Music Banner -->
     <div class="relative bg-black rounded-sm overflow-hidden my-10 flex items-center min-h-[500px]">
         <!-- Blurred gray glow behind the image -->
-        <div class="absolute right-[10%] top-[30%] w-[420px] h-[200px] rounded-full bg-gray-200/60 blur-[100px] z-0"></div>
+        <div class="absolute right-[10%] top-[10%] w-[420px] h-[420px] rounded-full bg-[#D9D9D9] blur-2xl opacity-30 z-0"></div>
         <!-- Left: text + countdown -->
         <div class="flex-1 p-12 z-10">
             <span class="text-green-400 text-sm font-medium block mb-6">Categories</span>
@@ -196,6 +196,72 @@
             <button class="bg-[#DB4444] w-[234px] px-4 py-4 hover:bg-[#DB4444]/90 text-sm font-medium cursor-pointer">
                 View All Products
             </button>
+        </div>
+    </div>
+
+    <!-- New Arrival -->
+    <div class="py-8 mb-5">
+        <div class="mb-8">
+            <div class="border-l-4 border-red-500 py-1 flex items-center">
+                <span class="text-sm text-red-500 pl-2">Featured</span>
+            </div>
+            <h2 class="text-2xl font-bold mt-2">New Arrival</h2>
+        </div>
+
+        <div class="grid grid-cols-4 grid-rows-2 gap-4 h-[600px]">
+
+            <!-- PlayStation 5 — left, spans 2 cols × 2 rows -->
+            <div class="col-span-2 row-span-2 relative bg-black rounded overflow-hidden group">
+                <img
+                    src="assets/img/products/ps5.png"
+                    alt="PlayStation 5"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                    <h3 class="text-xl font-semibold">PlayStation 5</h3>
+                    <p class="text-sm text-gray-300 mt-1 max-w-[220px]">Black and White version of the PS5 coming out on sale.</p>
+                    <a href="#" class="text-white text-sm font-medium underline mt-3 inline-block hover:text-gray-300 transition-colors">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Women's Collections — top right, spans 2 cols -->
+            <div class="col-span-2 relative bg-black rounded overflow-hidden group">
+                <img
+                    src="assets/img/products/attractive-woman-wearing-hat-posing-black-background 1.png"
+                    alt="Women's Collections"
+                    class="absolute right-0 w-auto h-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                    <h3 class="text-xl font-semibold">Women's Collections</h3>
+                    <p class="text-sm text-gray-300 mt-1 max-w-[220px]">Featured woman collections that give you another vibe.</p>
+                    <a href="#" class="text-white text-sm font-medium underline mt-3 inline-block hover:text-gray-300 transition-colors">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Speakers — bottom right, left half -->
+            <div class="relative bg-black rounded overflow-hidden group">
+                <img
+                    src="assets/img/products/e5659d572977438364a41d7e8c9d1e9a794d43ed.png"
+                    alt="Speakers"
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="text-base font-semibold">Speakers</h3>
+                    <p class="text-xs text-gray-300 mt-1">Amazon wireless speakers</p>
+                    <a href="#" class="text-white text-xs font-medium underline mt-2 inline-block hover:text-gray-300 transition-colors">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Perfume — bottom right, right half -->
+            <div class="relative bg-black rounded overflow-hidden group">
+                <img
+                    src="assets/img/products/15315cd15102562cf220504d288fa568eaa816dd.png"
+                    alt="Perfume"
+                    class="absolute inset-0 w-auto h-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="text-base font-semibold">Perfume</h3>
+                    <p class="text-xs text-gray-300 mt-1">GUCCI INTENSE OUD EDP</p>
+                    <a href="#" class="text-white text-xs font-medium underline mt-2 inline-block hover:text-gray-300 transition-colors">Shop Now</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

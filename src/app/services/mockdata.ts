@@ -10,20 +10,20 @@ export const categories: Category[] = [
 ];
 
 export const destaques: Product[] = [
-    {
-        id: 1,
-        name: "Product 1",
-        price: 100,
-        imageUrl: "assets/img/products/ak-900-01-500x500 1.png",
-        description: "Description for Product 1"
-    },
-    {
-        id: 2,
-        name: "Product 2",
-        price: 200,
-        imageUrl: "assets/img/products/ak-900-01-500x500 1.png",
-        description: "Description for Product 2"
-    },
+  {
+    id: 1,
+    name: "PlayStation 5",
+    price: 100,
+    imageUrl: "assets/img/products/ps5.png",
+    description: "Console de nova geração da Sony com desempenho ultrarrápido graças ao SSD NVMe personalizado, suporte a jogos em 4K até 120 FPS e Ray Tracing para iluminação e reflexos realistas. O controle DualSense oferece feedback háptico e gatilhos adaptativos que elevam a imersão. Compatível com a vasta biblioteca do PS4 e com exclusivos aclamados, o PS5 proporciona uma experiência cinematográfica e envolvente para jogadores casuais e hardcore."
+  },
+  {
+    id: 2,
+    name: "Xbox Series X",
+    price: 200,
+    imageUrl: "assets/img/products/ak-900-01-500x500 1.png",
+    description: "O console mais poderoso da Microsoft, projetado para desempenho máximo com CPU e GPU de última geração, jogos em 4K nativo e até 120 FPS. Possui SSD NVMe ultrarrápido para carregamentos quase instantâneos e tecnologia Quick Resume, permitindo alternar entre vários jogos em segundos. Compatível com milhares de títulos de gerações anteriores e otimizado para o Xbox Game Pass, oferecendo enorme variedade de jogos com excelente qualidade gráfica e estabilidade."
+  },
 ];
 
 export const productPromosToday: Product[] = [
